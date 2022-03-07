@@ -1,4 +1,4 @@
-import React, {Fragment, useCallback, useEffect, useState} from 'react'
+import React, { Fragment, useCallback, useEffect, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/solid'
 import logo from '../assets/logo.png'
@@ -9,17 +9,17 @@ import { useTranslation } from "react-i18next";
 import { MusicNoteIcon } from '@heroicons/react/outline'
 
 const navigation = [
-  { name: 'PRÉSENTATION', href: 'p' },
+  { name: 'PRÉSENTATION', href: '/p' },
   {
     name: 'CHAMBRES & SUITES',
-    href: 'cs',
+    href: '/cs',
   },
-  { name: 'SPA & BIEN ÊTRE', href: 'sbe' },
-  { name: 'TARIFS', href: 't' },
-  { name: 'RÉSERVATIONS', href: 'r' },
-  { name: 'ACTIVITÉS', href: 'dn' },
-  { name: 'GALÉRIES PHOTO', href: 'gp' },
-  { name: 'INFORMATIONS & CONTACT', href: 'ic' },
+  { name: 'SPA & BIEN ÊTRE', href: '/sbe' },
+  { name: 'TARIFS', href: '/t' },
+  { name: 'RÉSERVATIONS', link: 'https://reservations.verticalbooking.com/reservation_hotel_start.htm?id_stile=10398&headvar=ok&lingua_int=eng&id_albergo=13549&dc=3614' },
+  { name: 'ACTIVITÉS', href: '/dn' },
+  { name: 'GALÉRIES PHOTO', href: '/gp' },
+  { name: 'INFORMATIONS & CONTACT', href: '/ic' },
 ]
 
 function Header() {
@@ -43,13 +43,13 @@ function Header() {
   )
   return (
     <>
-      <div className="text-white bg-banner-logo border-b border-white border-opacity-25 flex items-center justify-center py-2 relative" style={{height:"7.375rem"}}>
+      <div className="text-white bg-banner-logo border-b border-white border-opacity-25 flex items-center justify-center py-2 relative" style={{ height: "7.375rem" }}>
         <Link to='/' className="inline-block h-full rounded-full">
-        <img
-          className="inline-block h-full rounded-full"
-          src={logo}
-          alt=""
-        />
+          <img
+            className="inline-block h-full rounded-full"
+            src={logo}
+            alt=""
+          />
         </Link>
         <div className="absolute right-5">
           <MusicNoteIcon className="h-6" onClick={StartMusic} />
@@ -63,19 +63,25 @@ function Header() {
                 className="relative bg-black flex items-center justify-between h-9 px-4 sm:px-6 lg:px-8"
                 aria-label="Global"
               >
-                
+
                 <div className="hidden space-x-10 lg:flex lg:flex-1 lg:ml-10 w-full justify-center">
-                  {navigation.map((item) => (
-                    <NavLink
+                  {navigation.map((item) => {
+                    return item.href ? <NavLink
                       key={item.name}
-                      to={"/"+item.href}
+                      to={item.href}
                       className="text-base font-sm text-white text-opacity-50 hover:text-cyan-100 hover:text-opacity-100"
                       activeClassName="text-opacity-100"
                       onClick={Show}
                     >
                       {item.name}
-                    </NavLink>
-                  ))}
+                    </NavLink> :
+                      <a key={item.name}
+                        className="text-base font-sm text-white text-opacity-50 hover:text-cyan-100 hover:text-opacity-100"
+                        href="https://reservations.verticalbooking.com/reservation_hotel_start.htm?id_stile=10398&headvar=ok&lingua_int=eng&id_albergo=13549&dc=3614">
+                        {item.name}
+                      </a>
+                  }
+                  )}
                 </div>
                 <div className="flex items-center justify-between w-full lg:w-auto">
                   <div className="-mr-2 flex items-center lg:hidden">
@@ -84,11 +90,11 @@ function Header() {
                       <MenuIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
                   </div>
-                  
-                    <p>
-                      <button className={`text-white ${lang == 'fr' ? 'text-opacity-100':"text-opacity-40"}`} onClick={()=>setLang("fr")}>FR</button> |{' '}
-                      <button className={`text-white ${lang == 'en' ? 'text-opacity-100':"text-opacity-40"}`} onClick={()=>setLang("en")}>EN</button>
-                    </p>
+
+                  <p>
+                    <button className={`text-white ${lang == 'fr' ? 'text-opacity-100' : "text-opacity-40"}`} onClick={() => setLang("fr")}>FR</button> |{' '}
+                    <button className={`text-white ${lang == 'en' ? 'text-opacity-100' : "text-opacity-40"}`} onClick={() => setLang("en")}>EN</button>
+                  </p>
                 </div>
               </nav>
 
@@ -128,7 +134,7 @@ function Header() {
                         {navigation.map((item) => (
                           <Link
                             key={item.name}
-                            to={"/"+item.href}
+                            to={"/" + item.href}
                             className="block px-3 py-2 rounded-md text-base font-medium text-warm-gray-900 hover:bg-warm-gray-50"
                           >
                             {item.name}
