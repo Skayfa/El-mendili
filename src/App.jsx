@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { connect, useDispatch, useSelector } from 'react-redux';
 import {
   BrowserRouter as Router,
@@ -25,13 +25,13 @@ export function App() {
     [],
   )
   // 
-  useEffect(()=>{
-    if(loader){
-      setTimeout(()=>{
+  useEffect(() => {
+    if (loader) {
+      setTimeout(() => {
         Hide()
       }, 2000)
     }
-  },[loader])
+  }, [loader])
   return (
     <Router>
       <div className="bg-black h-screen max-h-screen w-screen flex flex-col text-white overflow-hidden text-base tracking-wide relative">
@@ -46,11 +46,13 @@ export function App() {
             <p className="text-sm font-sm text-white text-center text-opacity-50">© 2021 Al Mendili Private Resort & Spa Marrakech. All right reserved. </p>
           </div>
         </>
-        <div className='absolute right-10 bottom-24 h-4  z-30 rounded-full shadow transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'> <img className='w-14' src={whatsup} alt="" /></div>
+        {/* <div className='absolute right-10 bottom-24 h-4  z-30 rounded-full shadow transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
+          <img className='w-14' src={whatsup} alt="" />
+        </div> */}
       </div>
-      
+
       <div>
-        <Sound 
+        <Sound
           url={music}
           playStatus={musicEtat}
           playFromPosition={300}
