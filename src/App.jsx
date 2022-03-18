@@ -12,7 +12,7 @@ import { hideAction } from './store/actions/loaderActions';
 
 import whatsup from './assets/svg/whatsup.svg'
 
-import music from './assets/musique/houzam.mp3'
+import music from './assets/musique/BIENVENUE.mp3'
 
 export function App() {
   const loader = useSelector(state => state.loader.value)
