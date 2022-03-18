@@ -5,25 +5,33 @@
 .slide:hover {
   flex: 5;
 }
+
 /* ################ */
 .xx {
   animation-name: learn;
   animation-duration: 3s;
 }
+
 .xxx {
   animation-duration: 2s;
   transition: background 2s;
 }
 
 @keyframes learn {
-  from {width:0}
-  to { width:100%}
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
 }
+
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: rgb(102, 102, 102) rgba(0, 0, 0, 0.274);
-  font-family: "Georgia";
+  font-family: "Roboto";
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -40,220 +48,283 @@
   border-radius: 20px;
   border: 3px solid rgba(0, 0, 0, 0.274);
 }
+
 /* Font */
 @font-face {
   font-family: 'Georgia';
-  src: url('./assets/font/Georgia.ttf') ;
+  src: url('./assets/font/Georgia.ttf');
 }
+
 @font-face {
   font-family: "Georgia";
   src: url("./assets/font/georgia bold.ttf");
   font-weight: bold;
 }
+
 @font-face {
   font-family: "Georgia";
   src: url("./assets/font/georgia bold.ttf");
   font-weight: bold;
 }
+
 @font-face {
   font-family: "Georgia";
   src: url("./assets/font/georgia\ italic.ttf");
   font-style: italic;
 }
+
 @font-face {
   font-family: "Georgia";
   src: url("./assets/font/georgia\ italic.ttf");
   font-style: italic;
 }
+
 @font-face {
   font-family: "Georgia";
   src: url("./assets/font/Georgia\ Bold\ Italic\ font.ttf");
   font-weight: bold;
   font-style: italic, bold;
 }
+
 /* Animation */
 @keyframes fade1 {
   0% {
     opacity: 1;
   }
+
   15% {
     opacity: 0;
   }
+
   30% {
     opacity: 0;
   }
+
   45% {
     opacity: 0;
   }
+
   60% {
     opacity: 0;
   }
+
   75% {
     opacity: 0;
   }
+
   90% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 @keyframes fade2 {
   0% {
     opacity: 0;
   }
+
   15% {
     opacity: 1;
   }
+
   30% {
     opacity: 0;
   }
+
   45% {
     opacity: 0;
   }
+
   60% {
     opacity: 0;
   }
+
   75% {
     opacity: 0;
   }
+
   90% {
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 @keyframes fade3 {
   0% {
     opacity: 0;
   }
+
   15% {
     opacity: 0;
   }
+
   30% {
     opacity: 1;
   }
+
   45% {
     opacity: 0;
   }
+
   60% {
     opacity: 0;
   }
+
   75% {
     opacity: 0;
   }
+
   90% {
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 @keyframes fade4 {
   0% {
     opacity: 0;
   }
+
   15% {
     opacity: 0;
   }
+
   30% {
     opacity: 0;
   }
+
   45% {
     opacity: 1;
   }
+
   60% {
     opacity: 0;
   }
+
   75% {
     opacity: 0;
   }
+
   90% {
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 @keyframes fade5 {
   0% {
     opacity: 0;
   }
+
   15% {
     opacity: 0;
   }
+
   30% {
     opacity: 0;
   }
+
   45% {
     opacity: 0;
   }
+
   60% {
     opacity: 1;
   }
+
   75% {
     opacity: 0;
   }
+
   90% {
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 @keyframes fade6 {
   0% {
     opacity: 0;
   }
+
   15% {
     opacity: 0;
   }
+
   30% {
     opacity: 0;
   }
+
   45% {
     opacity: 0;
   }
+
   60% {
     opacity: 0;
   }
+
   75% {
     opacity: 1;
   }
+
   90% {
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 @keyframes fade7 {
   0% {
     opacity: 0;
   }
+
   15% {
     opacity: 0;
   }
+
   30% {
     opacity: 0;
   }
+
   45% {
     opacity: 0;
   }
+
   60% {
     opacity: 0;
   }
+
   75% {
     opacity: 0;
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 .fade-out {
   animation: fadeOut ease 2s;
   -webkit-animation: fadeOut ease 2s;
@@ -261,38 +332,43 @@
   -o-animation: fadeOut ease 2s;
   -ms-animation: fadeOut ease 2s;
 }
+
 @keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
+
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
 @-moz-keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
+
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
 @-webkit-keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
+
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
 @-o-keyframes fadeOut {
   0% {
-    opacity:1;
+    opacity: 1;
   }
+
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }

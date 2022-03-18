@@ -46,9 +46,9 @@ export function App() {
             <p className="text-sm font-sm text-white text-center text-opacity-50">© 2021 Al Mendili Private Resort & Spa Marrakech. All right reserved. </p>
           </div>
         </>
-        {/* <div className='absolute right-10 bottom-24 h-4  z-30 rounded-full shadow transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
+        <div className='absolute right-10 bottom-24 h-4  z-30 rounded-full shadow transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'>
           <img className='w-14' src={whatsup} alt="" />
-        </div> */}
+        </div>
       </div>
 
       <div>
